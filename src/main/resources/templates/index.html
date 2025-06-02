@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пинг-Понг</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Пинг-Понг</h1>
+        <div class="score-board">
+            <div class="score">
+                <span>Игрок 1: </span><span id="leftScore">0</span>
+            </div>
+            <div class="score">
+                <span>Игрок 2: </span><span id="rightScore">0</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div class="controls">
+            <div class="player-controls">
+                <h3>Игрок 1 (Левый)</h3>
+                <p>W - Вверх, S - Вниз</p>
+            </div>
+            <div class="player-controls">
+                <h3>Игрок 2 (Правый)</h3>
+                <p>↑ - Вверх, ↓ - Вниз</p>
+            </div>
+        </div>
+        <div class="connection-status">
+            <span id="connectionStatus">Подключение...</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/js/game.js"></script>
+</body>
+</html>
